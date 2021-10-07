@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Today's Date</title>
+        <script>
+            let d = new Date();
+            alert("Alert check: Today's date is " + d);
+        </script>
+    </head>
+    <body>
+        <p/><b>TESTING AUDIO</b>
+        <p/>
+            <b>Listen to "correct" sound:</b>
+            <p/>    <p/>    <p/>
+            <audio
+            controls
+            src="audio/correct.mp3">
+                Your browser does not support the
+                <code>audio</code> element.
+            </audio>
+            <p/>    <p/>    <p/>
+            <b>Listen to "refresh" sound:</b>
+            <p/>    <p/>    <p/>
+            <audio
+            controls
+            src="audio/refresh.mp3">
+                Your browser does not support the
+                <code>audio</code> element.
+            </audio>
+            <p/>
+            
+            <script>
+            // self executing function here
+            (function() {
+                const audio = document.querySelector('audio');
+
+                audio.addEventListener('ended', (event) => {
+                  console.log('audio stopped either because 1) it was over, ' +
+                      'or 2) no further data is available.');
+                  alert("audio stopped");
+                });
+
+            })();
+            </script>
+    </body>
+</html>
